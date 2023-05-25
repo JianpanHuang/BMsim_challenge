@@ -18,7 +18,7 @@ pulse_rep = 1;     % repeat number of pulse
 %% exchange settings
 %       {name,           t1 [s],   t2 [s],    exch rate [Hz],  dw [ppm],    fraction (0~1)}
 water = {'water',        3.0,      2.0        1,               0,           1};
-guanid   = {'guanidinium',  1.05,     0.1,       50,              1.9,         5.0e-04};
+guanid = {'guanidinium',  1.05,     0.1,       50,              1.9,         5.0e-04};
 pools = {water; guanid};
 
 %% cest simulation
