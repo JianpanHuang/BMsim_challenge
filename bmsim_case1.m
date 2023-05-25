@@ -11,7 +11,7 @@ gamma_hz = gamma/2/pi;
 pulse_pwr = 2; % in uT
 pulse_dur = 15; % pulse duration in s
 pulse1 = [pulse_pwr*gamma_hz, 0, pulse_dur];
-pulse2 = [0, 0, 6.5e-3]; % tpost in s
+pulse2 = [0, 0, 6.5e-3]; % post-pulse delay in s
 pulse_cell = {pulse1, pulse2};
 pulse_rep = 1;     % repeat number of pulse
 
