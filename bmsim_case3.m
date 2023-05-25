@@ -9,17 +9,20 @@ gamma_hz = gamma/2/pi;
 % rel_b1 = 1;
 % pulse information
 pulse_pwr = 2; % in uT
-pulse_dur = 15; % pulse duration in s
+pulse_dur = 2; % pulse duration in s
 pulse1 = [pulse_pwr*gamma_hz, 0, pulse_dur];
 pulse2 = [0, 0, 6.5e-3]; % post-pulse delay in s
 pulse_cell = {pulse1, pulse2};
 pulse_rep = 1;     % repeat number of pulse
 
 %% exchange settings
-%       {name,             t1 [s],   t2 [s],    exch rate [Hz],  dw [ppm],    fraction (0~1)}
-water  = {'water',         3.0,      2.0        1,               0,           1};
-guanid = {'creatine_gua',  1.05,     0.1,       50,              1.9,         5.0e-04};
-pools = {water; guanid};
+%       {name,            t1 [s],   t2 [s],    exch rate [Hz],  dw [ppm],    fraction (0~1)}
+water  = {'water',        1.0,      0.04       1,               0,           1};
+mt     = {'mt',           1.0,      4.0e-05,   30,              -3.0,        0.1351};
+amide  = {'amide',        1.0,      0.1        50,              3.5,         0.0009009};
+guanid = {'guanidine',    1.0,      0.1,       1000,            2.0,         0.0009009};
+noe    = {'noe',          1.3,      0.005,     20,              -3.0,        0.0045};
+pools = {water; mt; amide; guanid; noe};
 
 %% cest simulation
 offs_list = [-300,-15:0.1:15]';
