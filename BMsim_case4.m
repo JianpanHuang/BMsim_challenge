@@ -10,7 +10,8 @@ gamma_hz = gamma/2/pi;
 % saturation rf pulse 
 pulse1_pwr = 3.7; % in uT
 pulse1_dur = 0.005; % pulse duration in s
-pulse1 = [pulse1_pwr*gamma_hz, 0, pulse1_dur];
+pulse1_phase = 0; % pulse duration in s
+pulse1 = [pulse1_pwr*gamma_hz, pulse1_phase, pulse1_dur];
 pulse2_tmix = 0; % pulse mixing time in s
 pulse2 = [0, 0, pulse2_tmix];
 pulse_cell = {pulse1, pulse2};
